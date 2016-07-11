@@ -1,10 +1,10 @@
-# Yuuko Blog
+# Yuuko Blog (Ported to MySQL)
 
 A light-weight single user blog system which based on ASP.Net Core 1.0.0
 
 - ASP.Net Core 1.0.0
 - Entity Framework Core 1.0.0
-- SQLite v3
+- MySQL 5.6 Community
 - ASP.Net MVC Core 1.0.0
 - Pomelo Extensions for .Net Core 1.0.0
 

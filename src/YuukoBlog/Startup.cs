@@ -17,10 +17,7 @@ namespace YuukoBlog
         {
             IConfiguration Configuration;
             services.AddConfiguration(out Configuration);
-            var connStr = $"Data source={Configuration["DBFile"]};";
-            if (connStr.IndexOf('\\') >= 0)
-                connStr = connStr.Replace("/", "\\");
-            services.AddDbContext<BlogContext>(x => x.UseSqlite(connStr));
+            services.AddDbContext<BlogContext>(x => x.UseMySql(Configuration["Conn"]));
 
             services.AddSmartCookies();
 

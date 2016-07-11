@@ -7,7 +7,7 @@
   "Description": "Amamiya Yuuko's ebullient future",
   "Disqus": "yuuko",
   "DefaultTemplate": "Default",
-  "DBFile": "Yuuko.db",
+  "Conn": "server=localhost;database=yuukoblog;uid=root;pwd=19931101",
   "BlogRoll": {
     "GitHub": "Kagamine",
     "Follower": true,

@@ -23,7 +23,7 @@ namespace YuukoBlog.Tests
             #endregion
             var regex = new Regex(@"(?<=<span class=""counter"">)[\s\r\n0-9]{0,}");
             Assert.True(regex.Match(html).Success);
-            Assert.Equal(105, Convert.ToInt32(regex.Match(html).Value.Trim()));
+            Assert.Equal(41, Convert.ToInt32(regex.Match(html).Value.Trim()));
         }
 
         [Fact]
@@ -1928,7 +1928,7 @@ namespace YuukoBlog.Tests
             #endregion
             var regex = new Regex(@"(?<=<span class=""css-truncate css-truncate-target"" title="").*(?=</a></span></h3>)");
             var matches = regex.Matches(html);
-            Assert.Equal(105, matches.Count);
+            Assert.Equal(41, matches.Count);
         }
 
         [Fact]
@@ -1972,7 +1972,7 @@ namespace YuukoBlog.Tests
 <meta name=""google-site-verification"" content=""ZzhVyEFwb7w3e0-uOTltm8Jsck2F5StVihD0exw2fsA"">
     <meta name=""google-analytics"" content=""UA-3769691-2"">";
             #endregion
-            var regex = new Regex(@"(?<=<meta content="").*(?="" name=""twitter:image:src"" /><meta content="")");
+            var regex = new Regex(@"(?<=<meta content="").*(?="" property=""og:image"" /><meta content="")");
             var result = regex.Match(html).Value;
             Assert.Equal("https://avatars1.githubusercontent.com/u/2216750?v=3&amp;s=400", result);
         }
